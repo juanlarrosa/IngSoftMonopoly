@@ -9,6 +9,7 @@ public abstract class Card {
     public abstract int getCardType();
 
     public abstract String getLabel();
+    
 }
 
 
