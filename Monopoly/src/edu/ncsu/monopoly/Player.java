@@ -235,7 +235,7 @@ public class Player {
 	        }
         }
         catch(Exception e){
-        	property.setOwner(this);
+
         }
         setMoney(getMoney() + amount);
     }
