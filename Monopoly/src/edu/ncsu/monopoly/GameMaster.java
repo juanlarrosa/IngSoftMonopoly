@@ -295,18 +295,22 @@ public class GameMaster {
 	public void startGame() {
 		gui.startGame();
 		gui.enablePlayerTurn(0);
-        gui.setTradeEnabled(0, true);
+        gui.setTradeEnabled(0, false);
+        
 	}
 
 	public void switchTurn() {
 		turn = (turn + 1) % getNumberOfPlayers();
+                
 		if(!getCurrentPlayer().isInJail()) {
 			gui.enablePlayerTurn(turn);
-			gui.setBuyHouseEnabled(getCurrentPlayer().canBuyHouse());
-            gui.setTradeEnabled(turn, true);
+                        gui.setBuyHouseEnabled(getCurrentPlayer().canBuyHouse());
+                        gui.setTradeEnabled(turn, true);
+                         
+			
 		}
 		else {
-			gui.setGetOutOfJailEnabled(false);
+			gui.setGetOutOfJailEnabled(true);
 		}
 	}
 	
