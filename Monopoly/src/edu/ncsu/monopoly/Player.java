@@ -1,11 +1,12 @@
 package edu.ncsu.monopoly;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.Hashtable;
 
 
-public class Player {
+public class Player implements Serializable{
 	//the key of colorGroups is the name of the color group.
 	private Hashtable colorGroups = new Hashtable();
 	private boolean inJail;
@@ -256,6 +257,7 @@ public class Player {
 		this.position = newPosition;
 	}
 
+    @Override
     public String toString() {
         return name;
     }
@@ -269,4 +271,5 @@ public class Player {
     public void payRentToBank(int ammount){
     	this.money -= ammount;
     }
+    
 }

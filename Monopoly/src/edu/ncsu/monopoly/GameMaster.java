@@ -1,10 +1,11 @@
 package edu.ncsu.monopoly;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Iterator;
 
 
-public class GameMaster {
+public class GameMaster{
 
 	private static GameMaster gameMaster;
 	static final public int MAX_PLAYER = 8;	
